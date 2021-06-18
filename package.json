@@ -1,0 +1,15 @@
+{
+  "name": "js-library",
+  "version": "1.0.0",
+  "description": "permagame javascript library",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "Norsys (équipe: Forestal Virgil, Raux Maxence, Hubert Léopold)",
+  "license": "ISC",
+  "dependencies": {
+    "http": "*",
+    "https": "^1.0.0"
+  }
+}
