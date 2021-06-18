@@ -97,5 +97,5 @@ export interface PlantType {
 export type NeededNutriments = "LOW" | "MEDIUM" | "HIGH" | (string & {});
 
 export interface PlantFamilyMap {
-  [key: PlantFamilies]: Array<PlantType>;
+  [key: string]: Array<PlantType>;
 }
