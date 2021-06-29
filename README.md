@@ -69,7 +69,7 @@ une fin plus tragique attend votre plante...
 ## Fertilize
 
 ```js
-await Bot.harvest(line, column);
+await Library.fetilize(line, column);
 ```
 
 <img src="https://raw.githubusercontent.com/Permagame-2021/js-bot/master/screenshots/fertilizedSoil.png" title="fertilizedSoil" className="otherImages">
