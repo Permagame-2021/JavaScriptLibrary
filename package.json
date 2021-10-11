@@ -4,7 +4,7 @@
   "description": "permagame javascript library",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node ."
   },
   "author": "Norsys (équipe: Forestal Virgil, Raux Maxence, Hubert Léopold)",
   "license": "ISC",

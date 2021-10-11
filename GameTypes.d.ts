@@ -1,8 +1,16 @@
+export interface GameSettings {
+  altruisticFertilizationThreshold: number;
+  fertilizerCost: number;
+  fertilizerEffect: number;
+  altruisticPlantingThreshold: number;
+  proximityMultiplier: number;
+}
+
 export interface GameState {
   garden: Garden;
   globalScore: number;
-  players: Array<Player>;
-  gardenDimension: number;
+  players: PlayerList;
+  actions: PlayerActionList;
 }
 
 export interface Garden extends Array<Line> {}
@@ -24,12 +32,15 @@ export interface ParcelHistory {
 
 export interface Player {
   name: string;
+  group: PlantTypes;
   score: number;
   contributionRatio: number;
   scoreIncrease: number;
   bestScoreIncrease: number;
-  agency: string;
+  priority: boolean;
 }
+
+export type PlayerList = Array<Player>;
 
 export interface PlayerAction {
   playerName: string;
@@ -87,14 +98,12 @@ export type PlantTypeList = Array<PlantType>;
 export interface PlantType {
   plantName: PlantTypes;
   plantFamily: PlantFamilies;
-  nutrientNeed: NeededNutriments;
+  nutrientNeed: string; //ex: "2.5%" ou "-5.0%"
   points: number;
   turnToBeReady: number;
   turnToDie: number;
   readyImg: string;
 }
-
-export type NeededNutriments = "LOW" | "MEDIUM" | "HIGH" | (string & {});
 
 export interface PlantFamilyMap {
   [key: string]: Array<PlantType>;
