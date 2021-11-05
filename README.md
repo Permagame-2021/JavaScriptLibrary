@@ -4,7 +4,7 @@
 
 Clonez la librairie disponible au-dessus ! En voici quelques exemple d'utilisation.
 
-## Authentification
+## S'authentifier
 
 ```js
 const HOST = "permagame.app.norsys.io";
@@ -13,13 +13,13 @@ const TOKEN = "your token here";
 
 <img src="https://raw.githubusercontent.com/Permagame-2021/js-bot/master/screenshots/login.png" title="login" className="otherImages">
 
-Halte, qui va la ?<br/>
+Halte, qui va là ?<br/>
 Je sais que vous avez hate de jardiner, mais il faut vous connecter !<br/>
 Pour vous connecter cliquez sur l'onglet "Login" en haut à droite de cette fenêtre<br/>
 Une fois connecté, il vous faut récuperer le token en cliquant sur "COPY TOKEN"<br/>
 Et enfin vous pourez placer ce token dans le code juste au dessus à l'endroit indiqué.
 
-## Fetch the Game
+## Récupérer l'état de la partie
 
 ```js
 const game = await Library.fetchGameState();
@@ -34,7 +34,7 @@ Vous pouvez maintenant analyser le l'état du jeu
 Ceci est une parcelle, et comme vous pouvez le voir elle est vide... <br/>
 C'est bien triste une parcelle vide, ne serait-il pas possible de l'égayer un peu ?
 
-## Plant
+## Planter
 
 ```js
 await Library.plant(line, column, plantType);
@@ -50,7 +50,7 @@ Voyons voir le resultat...
 Votre plante est en pleine croissance,<br/>
 Et je peux même vous dire qu'il s'agira d'un maïs.
 
-## Harvest
+## Récolter
 
 ```js
 await Library.harvest(line, column);
@@ -66,7 +66,7 @@ Celle-ci était la fin heureuse
 Si vous tardez à récolter en revanche,<br/>
 une fin plus tragique attend votre plante...
 
-## Fertilize
+## Fertiliser
 
 ```js
 await Library.fetilize(line, column);
@@ -85,7 +85,7 @@ Pour éviter cela, pensez à fertiliser les parcelles de temps en temps.
 
 <img src="https://raw.githubusercontent.com/Permagame-2021/js-bot/master/screenshots/actionFertilize.png" title="actionFertilize" className="otherImages">
 
-## Plant Types
+## Les différents plantes
 
 ```js
 const plants = await Library.fetchPlants();
@@ -95,7 +95,7 @@ const plants = await Library.fetchPlants();
 
 Vous pouvez Récuperer des informations génerales sur les plantes afin d'étudier leurs rendements, ou encore leurs Familles.
 
-## Plant Families
+## Les différentes familles de plantes
 
 ```js
 const plantFamilies = await Library.fetchFamilies();
@@ -103,7 +103,7 @@ const plantFamilies = await Library.fetchFamilies();
 
 Vous pouvez également récupérer les familles de plante et les plantes qui en font parties.
 
-## Action List
+## La liste des actions courantes
 
 ```js
 const actionList = await Library.fetchActionList();
